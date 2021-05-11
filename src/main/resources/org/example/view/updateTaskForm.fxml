@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.text.Font?>
+<?import com.jfoenix.controls.JFXButton?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controller.UpdateTaskController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <JFXTextField fx:id="updateTaskField" focusColor="#b51d27" layoutX="31.0" layoutY="113.0" prefHeight="48.0" prefWidth="339.0" promptText="Task" unFocusColor="#741e7c">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXTextField>
+        <JFXTextField fx:id="updateDescriptionField" focusColor="#c62f4a" layoutX="31.0" layoutY="183.0" prefHeight="48.0" prefWidth="339.0" promptText="Description" unFocusColor="#6a22bc">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXTextField>
+        <JFXButton fx:id="updateTaskButton" layoutX="132.0" layoutY="260.0" prefHeight="48.0" prefWidth="137.0" style="-fx-background-color: #d32f2f;" text="Update Task" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </JFXButton>
+        <Label alignment="CENTER" layoutY="-5.0" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: #d32f2f;" text="2DO Update" textFill="WHITE">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
