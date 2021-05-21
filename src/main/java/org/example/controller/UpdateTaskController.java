@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.stage.Stage;
 import org.example.App;
 
 import java.io.IOException;
@@ -22,7 +23,10 @@ public class UpdateTaskController {
 
     @FXML
     void initialize() {
-
+        updateTaskButton.setOnMouseClicked(event->{
+            Stage stage = (Stage) updateTaskButton.getScene().getWindow();
+            stage.close();
+        });
 
     }
 
@@ -51,7 +55,6 @@ public class UpdateTaskController {
 
         try {
             loader.load();
-
             ListController listController = loader.getController();
             listController.refreshList();
         } catch (IOException e) {
