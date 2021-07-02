@@ -46,8 +46,15 @@ public class LoginController {
     void initialize() {
         databaseHandler = DatabaseHandler.getInstance();
         loginButton.setOnAction(event -> {
+            Shaker userNameShaker = new Shaker(loginUsername);
+            Shaker passwordShaker = new Shaker(loginPassword);
             String loginText = loginUsername.getText().trim();
             String loginPwd = loginPassword.getText().trim();
+            if (loginText.isEmpty() || loginPwd.isEmpty()) {
+                passwordShaker.shake();
+                userNameShaker.shake();
+                return;
+            }
             User user = new User();
             user.setUserName(loginText);
             user.setPassword(loginPwd);
@@ -62,10 +69,9 @@ public class LoginController {
                 }
                 if (counter == 1) {
                     showAddItemScreen();
-                }
-                else {
-                    Shaker userNameShaker = new Shaker(loginUsername);
-                    Shaker passwordShaker = new Shaker(loginPassword);
+                } else {
+                    userNameShaker = new Shaker(loginUsername);
+                    passwordShaker = new Shaker(loginPassword);
                     passwordShaker.shake();
                     userNameShaker.shake();
                 }

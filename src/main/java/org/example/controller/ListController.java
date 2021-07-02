@@ -6,10 +6,16 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import org.example.App;
 import org.example.database.DatabaseHandler;
 import org.example.model.Task;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
@@ -26,6 +32,8 @@ public class ListController {
     public JFXTextField listDescriptionField;
     @FXML
     public JFXButton listSaveTaskButton;
+    @FXML
+    private JFXButton logOutBt;
 
     private ObservableList<Task> tasks;
     private ObservableList<Task> refreshedTasks;
@@ -58,7 +66,20 @@ public class ListController {
         listSaveTaskButton.setOnAction(event -> {
             addNewTask();
         });
-
+        logOutBt.setOnMouseClicked(event -> {
+            logOutBt.getScene().getWindow().hide();
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(App.class.getResource("view/login.fxml"));
+            try {
+                loader.load();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Parent root = loader.getRoot();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.show();
+        });
     }
 
     public void refreshList() throws SQLException {

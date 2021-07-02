@@ -1,0 +1,15 @@
+org/example/controller/LoginController.class
+org/example/model/Task.class
+org/example/controller/AddItemFormController.class
+org/example/animations/Shaker.class
+org/example/controller/SignUpController.class
+org/example/database/DatabaseHandler.class
+module-info.class
+org/example/App.class
+org/example/controller/CellController.class
+org/example/database/Const.class
+org/example/model/User.class
+org/example/database/Configs.class
+org/example/controller/UpdateTaskController.class
+org/example/controller/ListController.class
+org/example/controller/AddItemController.class

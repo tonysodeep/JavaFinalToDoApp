@@ -24,7 +24,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="28e217a6-ba2a-405b-a8f3-6f865b200eea">
+        <schema name="ToDoApp" object-types="table, view, procedure, function, constraint, index, column, dataset trigger" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="28e217a6-ba2a-405b-a8f3-6f865b200eea">
@@ -41,6 +45,11 @@
     <filter-actions connection-id="28e217a6-ba2a-405b-a8f3-6f865b200eea" dataset="ToDoApp.User" active-filter-id="a52e7995-6f63-4380-b66e-50bda28cccb6">
       <filter id="a52e7995-6f63-4380-b66e-50bda28cccb6" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="UserId" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="28e217a6-ba2a-405b-a8f3-6f865b200eea" dataset="ToDoApp.Task" active-filter-id="9e3171f4-ec74-4a11-a1a9-ec0488d3c88d">
+      <filter id="9e3171f4-ec74-4a11-a1a9-ec0488d3c88d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="taskId" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
   </component>
